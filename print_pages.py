@@ -17,8 +17,7 @@
 В случае, если для некоторых i окажется, что li = ri, то этот номер следует записывать как li, а не li-li.
 """
 
-num_str = "1,3,1,4,5"  # вводные данные
-
+num_str = "1,3,1,4,5,8,10,9,4,5,2,15,20,16,17,18,19,25"
 
 def make_intervals(num_str):  #создаём функцию, где перебираем каждое число и проверяем общее количество вводных чисел
     str_list = num_str.split(",")
@@ -39,35 +38,38 @@ def make_intervals(num_str):  #создаём функцию, где переб�
         if i not in res_l:
             res_l.append(i)
 
-    res_str = []   # собираем строку на вывод
+    res_str = []   # начинаем собирать строку на вывод
     k = 0
     current_str_n = 0
 
     while k < len(res_l):
         if k == 0:
             res_str += str(res_l[current_str_n])
-            current_str_n = 0
+            res_str.append(",")
+            current_str_n = 1
         else:
             if res_l[k] - res_l[k-1] == 1:
 
                 if len(res_str) >= 3:
                     if res_str[current_str_n-2] == "-":
                         res_str[current_str_n - 1] = str(res_l[k])
-                        current_str_n += 1
 
                     else:
                         res_str.append("-")
                         res_str.append(str(res_l[k]))
-                        current_str_n += 2
+                        current_str_n += 3
+                        res_str.append(",")
                 else:
                     res_str.append("-")
                     res_str.append(str(res_l[k]))
-                    current_str_n += 2
+                    current_str_n += 3
+                    res_str.append(",")
+
             else:
                 res_str.append(str(res_l[k]))
-                current_str_n += 1
-        res_str.append(",")
-        current_str_n += 1
+                current_str_n += 2
+                res_str.append(",")
+
         k += 1
 
     result = ""
@@ -77,7 +79,7 @@ def make_intervals(num_str):  #создаём функцию, где переб�
         result = result.replace(",,", ",")
     while result.find(",-") != -1:
         result = result.replace(",-", "-")
-
-    return result[:-1]
+    result = result.replace(",", ", ")
+    return result[:-2]
 
 print(make_intervals(num_str))

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19309a5e-dde3-4758-9e4b-32a0b57195cf" name="Default Changelist" comment="" />
+    <list default="true" id="19309a5e-dde3-4758-9e4b-32a0b57195cf" name="Default Changelist" comment="">
+      <change afterPath="D:/documentation/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="D:/documentation/.idea/workspace.xml" beforeDir="false" afterPath="D:/documentation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="D:/documentation/print_pages.py" beforeDir="false" afterPath="D:/documentation/print_pages.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +18,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="D:/documentation" />
+  </component>
   <component name="ProjectId" id="24jMU3AdWeVJFwbVcFuYa7YR13X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
